@@ -37,6 +37,16 @@ public class Order {
      */
     private Integer match_price;
 
+    private Integer order_type;
+
+    public Integer getOrder_type() {
+        return order_type;
+    }
+
+    public void setOrder_type(Integer order_type) {
+        this.order_type = order_type;
+    }
+
     public String getInstrument_id() {
         return instrument_id;
     }
@@ -92,4 +102,6 @@ public class Order {
     public void setMatch_price(Integer match_price) {
         this.match_price = match_price;
     }
+
+
 }
