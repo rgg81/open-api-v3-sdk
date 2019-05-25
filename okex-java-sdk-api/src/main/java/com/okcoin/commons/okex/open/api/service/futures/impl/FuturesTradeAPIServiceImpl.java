@@ -87,8 +87,13 @@ public class FuturesTradeAPIServiceImpl implements FuturesTradeAPIService {
     }
 
     @Override
-    public JSONObject getOrders(String instrument_id, int status, Integer from, Integer to, int limit) {
+    public JSONObject getOrders(String instrument_id, int status, int from, int to, int limit) {
         return this.client.executeSync(this.api.getOrders(instrument_id, status, from, to, limit));
+    }
+
+    @Override
+    public JSONObject getOrdersSimple(String instrument_id, int status, int limit) {
+        return this.client.executeSync(this.api.getOrdersSimple(instrument_id, status, limit));
     }
 
     @Override

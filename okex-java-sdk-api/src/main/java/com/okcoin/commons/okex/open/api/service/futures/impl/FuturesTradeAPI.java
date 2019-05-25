@@ -49,6 +49,11 @@ interface FuturesTradeAPI {
     Call<JSONObject> getOrders(@Path("instrument_id") String instrumentId, @Query("status") int status,
                                @Query("from") int from, @Query("to") int to, @Query("limit") int limit);
 
+
+    @GET("/api/futures/v3/orders/{instrument_id}")
+    Call<JSONObject> getOrdersSimple(@Path("instrument_id") String instrumentId, @Query("status") int status,
+                               @Query("limit") int limit);
+
     @GET("/api/futures/v3/orders/{instrument_id}/{order_id}")
     Call<JSONObject> getOrder(@Path("instrument_id") String instrumentId, @Path("order_id") String orderId);
 

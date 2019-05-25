@@ -94,7 +94,10 @@ public interface FuturesTradeAPIService {
      *                 {@link com.okcoin.commons.okex.open.api.bean.futures.CursorPageParams}
      * @return
      */
-    JSONObject getOrders(String instrument_id, int status, Integer from, Integer to, int limit);
+    JSONObject getOrders(String instrument_id, int status, int from, int to, int limit);
+
+
+    JSONObject getOrdersSimple(String instrument_id, int status, int limit);
 
     /**
      * Get all of futures contract a order by order id
